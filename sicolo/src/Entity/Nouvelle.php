@@ -31,6 +31,11 @@ class Nouvelle
      */
     private $contenu;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Utilisateur", inversedBy="nouvelles")
+     */
+    private $utilisateur;
+
 
     public function getId(): ?int
     {
@@ -69,6 +74,18 @@ class Nouvelle
     public function setContenu(text $contenu): self
     {
         $this->contenu = $contenu;
+
+        return $this;
+    }
+
+    public function getUtilisateur(): ?Utilisateur
+    {
+        return $this->utilisateur;
+    }
+
+    public function setUtilisateur(?Utilisateur $utilisateur): self
+    {
+        $this->utilisateur = $utilisateur;
 
         return $this;
     }

@@ -26,6 +26,16 @@ class Cours
      */
     private $titre;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Utilisateur", inversedBy="cours")
+     */
+    private $utilisateur;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Classe", inversedBy="cours")
+     */
+    private $classe;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -51,6 +61,30 @@ class Cours
     public function setTitre(string $titre): self
     {
         $this->titre = $titre;
+
+        return $this;
+    }
+
+    public function getUtilisateur(): ?Utilisateur
+    {
+        return $this->utilisateur;
+    }
+
+    public function setUtilisateur(?Utilisateur $utilisateur): self
+    {
+        $this->utilisateur = $utilisateur;
+
+        return $this;
+    }
+
+    public function getClasse(): ?Classe
+    {
+        return $this->classe;
+    }
+
+    public function setClasse(?Classe $classe): self
+    {
+        $this->classe = $classe;
 
         return $this;
     }
