@@ -1,0 +1,9 @@
+sicolo/.gitignore
+sicolo/composer.json
+sicolo/composer.lock
+sicolo/config/bundles.php
+sicolo/config/packages/security_checker.yaml
+sicolo/config/packages/sensio_framework_extra.yaml
+sicolo/config/packages/twig.yaml
+sicolo/config/routes/dev/twig.yaml
+sicolo/symfony.lock

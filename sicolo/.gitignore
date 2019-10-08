@@ -7,3 +7,14 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+
+###> symfony/web-server-bundle ###
+/.web-server-pid
+###< symfony/web-server-bundle ###
+sicolo/composer.json
+sicolo/composer.lock
+sicolo/config/bundles.php
+sicolo/config/packages/security_checker.yaml
+sicolo/config/packages/sensio_framework_extra.yaml
+sicolo/config/packages/twig.yaml
+sicolo/config/routes/dev/
