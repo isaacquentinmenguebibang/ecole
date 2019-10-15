@@ -30,7 +30,7 @@ class SicoloController extends AbstractController
         return $this->render('sicolo/utilisateur/suppression.html.twig');
     }
     /**
-     * @Route("/accueil/nouvelle/inscription_nouvelle", name="insctiption_nouvelle")
+     * @Route("/accueil/nouvelle/inscription_nouvelle", name="inscription_nouvelle")
      */
     public function inscriptionNouvelle(){
         return $this->render('sicolo/nouvelle/inscription_nouvelle.html.twig');
@@ -42,28 +42,35 @@ class SicoloController extends AbstractController
         return $this->render('sicolo/nouvelle/modification_nouvelle.html.twig');
     }
     /**
-     * @Route("/accueil/nouvelle/consultation_nouvelles", name="consultation_nouvelles")
+     * @Route("/accueil/nouvelle/consultation_nouvelle", name="consultation_nouvelle")
      */
-    public function consultationNouvelles(){
-        return $this->render('sicolo/nouvelle/consultation_nouvelles.html.twig');
-    }
-     /**
-     * @Route("/accueil/note/televersement_notes", name="televersement_notes")
-     */
-    public function televersementNotes(){
-        return $this->render('sicolo/note/televersement_notes.html.twig');
-    }
-     /**
-     * @Route("/accueil/note/consultation_notes", name="consultation_notes")
-     */
-    public function consultationNotes(){
-        return $this->render('sicolo/note/consultation_notes.html.twig');
+    public function consultationNouvelle(){
+        return $this->render('sicolo/nouvelle/consultation_nouvelle.html.twig');
     }
     /**
-     * @Route("/accueil/payement/consultation_payements", name="consultation_payements")
+     * @Route("/accueil/nouvelle/suppression_nouvelle", name="suppression_nouvelle")
      */
-    public function consultationPayements(){
-        return $this->render('sicolo/payement/consultation_payements.html.twig');
+    public function suppressionNouvelle(){
+        return $this->render('sicolo/nouvelle/suppression_nouvelle.html.twig');
+    }
+
+     /**
+     * @Route("/accueil/note/televersement_note", name="televersement_note")
+     */
+    public function televersementNote(){
+        return $this->render('sicolo/note/televersement_note.html.twig');
+    }
+     /**
+     * @Route("/accueil/note/consultation_note", name="consultation_note")
+     */
+    public function consultationNote(){
+        return $this->render('sicolo/note/consultation_note.html.twig');
+    }
+    /**
+     * @Route("/accueil/payement/consultation_payement", name="consultation_payement")
+     */
+    public function consultationPayement(){
+        return $this->render('sicolo/payement/consultation_payement.html.twig');
     }
     /**
      * @Route("/accueil/payement/modification_payement", name="modification_payement")
@@ -76,6 +83,12 @@ class SicoloController extends AbstractController
      */
     public function suppressionPayement(){
         return $this->render('sicolo/payement/suppression_payement.html.twig');
+    }
+    /**
+     * @Route("/accueil/payement/enregistrement_payement", name="enregistrement_payement")
+     */
+    public function enregistrementPayement(){
+        return $this->render('sicolo/payement/enregistrement_payement.html.twig');
     }
      /**
      * @Route("/accueil/cahier/enregistrement_cahier_texte", name="enregistrement_cahier_texte")
@@ -94,6 +107,12 @@ class SicoloController extends AbstractController
      */
     public function suppressionCahierTexte(){
         return $this->render('sicolo/cahier/suppression_cahier_texte.html.twig');
+    }
+    /**
+     * @Route("/accueil/cahier/consultation_cahier_texte.html.twig", name="consultation_cahier_texte")
+     */
+    public function consultationCahierTexte(){
+        return $this->render('sicolo/cahier/consultation_cahier_texte.html.twig');
     }
     /**
      * @Route("/accueil/cours/televersement_cours", name="televersement_cours")
